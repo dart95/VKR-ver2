@@ -1,11 +1,30 @@
 import * as React from "react";
 import "../App.css";
 import Navibar from "./Navibar";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import { Home } from "./Home";
+import { Actual } from "./Actual";
+import { Sports } from "./Sports";
+
 function App() {
   return (
-    <div className="App">
-      <Navibar></Navibar>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navibar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/actual">
+            <Actual />
+          </Route>
+          <Route path="/sports">
+            <Sports />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
