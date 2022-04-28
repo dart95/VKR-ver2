@@ -1,0 +1,11 @@
+.card-img-top {
+  height: 300px;
+}
+
+@media (min-width: 576px) {
+  .card {
+    margin-right: 10px;
+
+    border: 2px solid black;
+  }
+}

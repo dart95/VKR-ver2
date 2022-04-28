@@ -19,7 +19,9 @@ export default function Navibar() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-        <Navbar.Brand>News</Navbar.Brand>
+        <Navbar.Brand onClick={redirecthome} role="button">
+          News
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">

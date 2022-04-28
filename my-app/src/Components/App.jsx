@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./Home";
 import { Actual } from "../Components/Actual";
-import { Sports } from "./Sports";
+import Sports from "./Sports";
 
 function App() {
   return (
