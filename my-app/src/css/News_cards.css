@@ -1,20 +1,31 @@
+.Card_title {
+  cursor: pointer;
+}
+.Card_img {
+  height: 300px;
+}
 @media (min-width: 1025px) {
-  .News_container {
+  .Cards_tank {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: space-between;
   }
 }
 @media (min-width: 1025px) {
   .News_cards {
     margin-right: 10px;
-    border: 3px solid rgba(175, 31, 31, 0.726);
+
     margin-left: 20px;
+  }
+  .Card_body {
+    border: 1px solid black;
   }
 }
 @media (max-width: 1024px) {
-  .News_cards {
+  .Cards_tank {
     margin-top: 20px;
-    border: 4px solid black;
+  }
+  .Card_body {
+    border: 1px solid black;
   }
 }

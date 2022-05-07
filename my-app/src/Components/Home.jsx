@@ -1,77 +1,90 @@
 import React from "react";
-
-function Home() {
+import Card from "react-bootstrap/Card";
+import { Col, Row } from "react-bootstrap";
+function Home(props) {
   return (
-    <div className="News_container">
-      <div className="News_cards">
-        <img
-          src="https://i.ytimg.com/vi/wet8176Hd8I/maxresdefault.jpg"
-          className="card-img-top"
-          alt="img"
-        />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <div className="card-footer">
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div className="News_cards">
-        <img
-          src="https://i.ytimg.com/vi/wet8176Hd8I/maxresdefault.jpg"
-          className="card-img-top"
-          alt="img"
-        />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <div className="card-footer">
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div className="News_cards">
-        <img
-          src="https://i.ytimg.com/vi/wet8176Hd8I/maxresdefault.jpg"
-          className="card-img-top"
-          alt="img"
-        />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <div className="card-footer">
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div className="News_cards">
-        <img
-          src="https://i.ytimg.com/vi/wet8176Hd8I/maxresdefault.jpg"
-          className="card-img-top"
-          alt="img"
-        />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <div className="cards-footer">
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Row xs={1} md={4} className="g-4">
+      <Col>
+        <Card className="Cards_tank">
+          <Card.Img
+            className="Card_img"
+            variant="top"
+            src="https://i.scdn.co/image/ab67616d0000b273166e4a5884f336f5769df3fd"
+          />
+          <Card.Body className="Card_body">
+            <Card.Title className="Card_title">Card title</Card.Title>
+            <Card.Text>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col>
+        <Card className="Cards_tank">
+          <Card.Img
+            className="Card_img"
+            variant="top"
+            src="https://i.scdn.co/image/ab67616d0000b273166e4a5884f336f5769df3fd"
+          />
+          <Card.Body className="Card_body">
+            <Card.Title className="Card_title">Card title</Card.Title>
+            <Card.Text>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col>
+        <Card className="Cards_tank">
+          <Card.Img
+            className="Card_img"
+            variant="top"
+            src="https://i.scdn.co/image/ab67616d0000b273166e4a5884f336f5769df3fd"
+          />
+          <Card.Body className="Card_body">
+            <Card.Title className="Card_title">Card title</Card.Title>
+            <Card.Text>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col>
+        <Card className="Cards_tank">
+          <Card.Img
+            className="Card_img"
+            variant="top"
+            src="https://i.scdn.co/image/ab67616d0000b273166e4a5884f336f5769df3fd"
+          />
+          <Card.Body className="Card_body">
+            <Card.Title className="Card_title">Card title</Card.Title>
+            <Card.Text>
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </Card.Text>
+            <Card.Footer>
+              <small className="text-muted">Last updated 3 mins ago</small>
+            </Card.Footer>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
   );
 }
 

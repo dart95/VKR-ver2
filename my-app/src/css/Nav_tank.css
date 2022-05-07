@@ -1,0 +1,12 @@
+@media (min-width: 1025px) {
+  .float-end {
+    margin-left: 49%;
+    margin-right: 2px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .float-end {
+    margin-left: 0;
+  }
+}
