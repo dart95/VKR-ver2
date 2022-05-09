@@ -54,7 +54,7 @@ export default function Navibar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr  -auto">
             <Nav.Link onClick={redirecthome} className="Nav-link">
-              Home
+              Home Page
             </Nav.Link>
             <Nav.Link onClick={redirectactual} className="Nav-link">
               Actual News
