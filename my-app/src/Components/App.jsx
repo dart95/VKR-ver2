@@ -3,7 +3,7 @@ import * as React from "react";
 import "../App.css";
 import Navibar from "./Navibar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { useState } from "react";
+//import { useState } from "react";
 //import cheerio from "cheerio";
 //mport axios from "axios";
 import Home from "./Home";
@@ -11,9 +11,22 @@ import Actual from "../Components/Actual";
 import Sports from "./Sports";
 import { Account } from "./Account";
 import Registrationpage from "./Registrationpage";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 
 function App(props) {
+  /*const [ntitle, setNtitle] = useState();
+  const [news, setNews] = useState({});
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => {
+        setNews(json);
+      });
+  });
+  const nw = news.title;
+  const tt = news.userId;*/
+
   const tank = {
     link1: "https://ria.ru/",
     link2: "https://www.kommersant.ru/",
