@@ -11,7 +11,6 @@ import Actual from "../Components/Actual";
 import Sports from "./Sports";
 import { Account } from "./Account";
 import Registrationpage from "./Registrationpage";
-//import { useEffect } from "react";
 
 function App(props) {
   /*const [ntitle, setNtitle] = useState();
@@ -48,9 +47,15 @@ function App(props) {
           <Route path="/sports">
             <Sports />
           </Route>
-          <Route path="/account">
-            <Account />
-          </Route>
+          <Route
+            exact
+            path="/account"
+            render={() => (
+              <React.Fragment>
+                <Account />
+              </React.Fragment>
+            )}
+          ></Route>
           <Route path="/registration">
             <Registrationpage />
           </Route>

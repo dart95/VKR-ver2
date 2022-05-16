@@ -25,7 +25,8 @@ export default function Navibar() {
     history.push("/registration");
   }
 
-  function test(setBtntext, color) {
+  function test() {
+    setRem(true);
     if (emailtrue === email && passwordtrue === password) {
       redirectaccount();
     } else {
@@ -40,6 +41,7 @@ export default function Navibar() {
   const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rem, setRem] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -52,47 +54,37 @@ export default function Navibar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr  -auto">
+          <Nav className="mr-auto">
             <Nav.Link onClick={redirecthome} className="Nav-link">
-              Home Page
+              Home
             </Nav.Link>
             <Nav.Link onClick={redirectactual} className="Nav-link">
-              Actual News
+              Actual
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Sports News
+              Sports
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Ria News
+              Ria
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Komsomol True
+              Komsomol
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Tass News
+              Tass
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Spas News
+              Spas
             </Nav.Link>
             <Nav.Link onClick={redirectsports} className="Nav-link">
-              Cyber sport News
+              Cyber sport
             </Nav.Link>
           </Nav>
           <Nav className="float-end">
-            <Button
-              variant="dark"
-              className="btn-log"
-              onClick={handleShow}
-              style={{}}
-            >
+            <Button variant="dark" onClick={handleShow}>
               Log In
             </Button>
-            <Button
-              variant="dark"
-              className="btn-reg"
-              onClick={redirectregistration}
-              style={{}}
-            >
+            <Button variant="dark" onClick={redirectregistration}>
               Sign up
             </Button>
           </Nav>
@@ -130,7 +122,7 @@ export default function Navibar() {
               />
             </Form.Group>
             <Form.Group controlId="fromBasicCheckbox">
-              <Form.Check type="checkbox" label="Remember me" />
+              <Form.Check type="checkbox" label="Remember me" value={rem} />
             </Form.Group>
             <Form.Group className="d-flex justify-content-end">
               <Button onClick={test}> Yes</Button>
