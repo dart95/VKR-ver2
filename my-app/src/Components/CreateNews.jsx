@@ -7,7 +7,6 @@ import { FloatingLabel } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import AccountCardNews from "./AccountCardNews";
-import AccountCardNews2 from "./AccountCardNews2";
 
 export default function CreateNews() {
   const [show, setShow] = useState(false);
@@ -56,14 +55,14 @@ export default function CreateNews() {
                         setSelector(e.target.value);
                       }}
                     >
-                      <option value="1">Politics</option>
-                      <option value="2">Geo Politics</option>
+                      <option value="1">DB</option>
+                      <option value="2">Statistick</option>
                       <option value="3">Economyc</option>
-                      <option value="4">Sports</option>
-                      <option value="5">Cyber Sports</option>
-                      <option value="6">Agriculture</option>
+                      <option value="4">Banks</option>
+                      <option value="5">HR</option>
+                      <option value="6">News</option>
                       <option value="7">exchange</option>
-                      <option value="8">Space</option>
+                      <option value="8">CoVid 19</option>
                     </Form.Select>
                   </FloatingLabel>
                 </Col>
@@ -110,7 +109,7 @@ export default function CreateNews() {
         </Modal>
       </div>
       <Row xs={1} md={3} className="g-3">
-        <Col>
+        <Col className="statcontainer">
           <Container>
             <Button variant="primary" className="news_btn" onClick={handleShow}>
               Create News
@@ -124,20 +123,27 @@ export default function CreateNews() {
             </p>
           </Container>
         </Col>
-        <Col style={{ backgroundColor: "grey" }}>
+        <Col style={{}}>
           <Card className="Cards_tank" style={{ marginTop: 50 }}>
-            <Card.Img className="Card_img" variant="top" src={img} alt="IMG" />
+            <Card.Img
+              className="Card_img"
+              variant="top"
+              src="https://prazdnik-segodnya.ru/wp-content/uploads/2017/10/IMG_0450-05-11-17-03-53-300x300.jpg"
+              alt="IMG"
+            />
             <Card.Body className="Card_body">
               <Card.Title className="Card_title">{title}</Card.Title>
               <Card.Text>{text}</Card.Text>
               <Card.Footer>
-                <small className="text-muted">Last updated ago</small>
+                <small className="text-muted">
+                  Olga Shmatko Last updated 10 min ago
+                </small>
               </Card.Footer>
             </Card.Body>
           </Card>
         </Col>
-        <Col>
-          <Container>
+        <Col className="statcontainer">
+          <Container className="statcontainer">
             <h1 className="stat_past_per">Current Period</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At
@@ -148,8 +154,6 @@ export default function CreateNews() {
           </Container>
         </Col>
         <AccountCardNews />
-        <AccountCardNews2 />
-        <AccountCardNews2 />
       </Row>
     </>
   );

@@ -15,8 +15,8 @@ export default function Navibar() {
     history.push("/");
   }
 
-  function redirectsports() {
-    history.push("/sports");
+  function redirectDev() {
+    history.push("/IT");
   }
   function redirectaccount() {
     history.push("/account");
@@ -30,7 +30,7 @@ export default function Navibar() {
     if (emailtrue === email && passwordtrue === password) {
       redirectaccount();
     } else {
-      alert("kozel");
+      alert("Пароль или логин не верные");
       handleClose();
     }
   }
@@ -61,23 +61,14 @@ export default function Navibar() {
             <Nav.Link onClick={redirectactual} className="Nav-link">
               Actual
             </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Sports
+            <Nav.Link onClick={redirectDev} className="Nav-link">
+              Dev
             </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Ria
+            <Nav.Link onClick={redirectDev} className="Nav-link">
+              DB
             </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Komsomol
-            </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Tass
-            </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Spas
-            </Nav.Link>
-            <Nav.Link onClick={redirectsports} className="Nav-link">
-              Cyber sport
+            <Nav.Link onClick={redirectDev} className="Nav-link">
+              Statistic
             </Nav.Link>
           </Nav>
           <Nav className="float-end">

@@ -1,6 +1,9 @@
 .stat_past_per {
-  background-color: brown;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.statcontainer {
+  background-color: #2da79c;
 }

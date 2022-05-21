@@ -27,7 +27,7 @@ function App(props) {
   const tt = news.userId;*/
 
   const tank = {
-    link1: "https://ria.ru/",
+    link1: "https://ria.ru/20220519/kurs-1789389723.html",
     link2: "https://www.kommersant.ru/",
     link3:
       "https://tass.ru/?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com",
@@ -39,7 +39,7 @@ function App(props) {
         <Navibar />
         <Switch>
           <Route exact path="/">
-            <Home link={tank} />
+            <Home />
           </Route>
           <Route path="/actual">
             <Actual />

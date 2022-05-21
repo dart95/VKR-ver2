@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 
-export default function AccountCardNews2() {
+export default function AccountCardNews() {
   //Unit on Past Periods
   const lettankPast = {
     persentCTR: 0,
@@ -185,10 +185,10 @@ export default function AccountCardNews2() {
   }
   return (
     <>
-      <Col>
+      <Col className="statcontainer">
         <Container style={{}}>
           <h1 className="stat_past_per">Past Period</h1>
-          <Row xs={5} md={1} className="g-3">
+          <Row xs={1} md={1} className="g-4">
             <Col style={{ color: compareval.alljumpPast }}>
               <Card.Title>
                 Общее Число просмотров: {sumvariablesPast.allvuews}
@@ -240,7 +240,7 @@ export default function AccountCardNews2() {
           </Row>
         </Container>
       </Col>
-      <Col style={{ backgroundColor: "grey" }}>
+      <Col style={{}}>
         <Card className="Cards_tank" style={{ marginTop: 50 }}>
           <Card.Img
             className="Card_img"
@@ -257,10 +257,10 @@ export default function AccountCardNews2() {
           </Card.Body>
         </Card>
       </Col>
-      <Col>
+      <Col className="statcontainer">
         <Container>
           <h1 className="stat_past_per">Current Period</h1>
-          <Row xs={5} md={1} className="g-3">
+          <Row xs={1} md={1} className="g-4">
             <Col style={{ color: compareval.allvuewsCur }}>
               <Card.Title>
                 Общее Число просмотров: {sumvariablesCur.allvuews}

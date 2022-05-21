@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
+import AccountCardNews2 from "./AccountCardNews2";
 
 export default function AccountCardNews() {
   //Unit on Past Periods
@@ -185,10 +186,10 @@ export default function AccountCardNews() {
   }
   return (
     <>
-      <Col>
-        <Container style={{}}>
+      <Col className="statcontainer">
+        <Container>
           <h1 className="stat_past_per">Past Period</h1>
-          <Row xs={5} md={1} className="g-3">
+          <Row xs={1} md={1} className="g-4">
             <Col style={{ color: compareval.alljumpPast }}>
               <Card.Title>
                 Общее Число просмотров: {sumvariablesPast.allvuews}
@@ -240,27 +241,35 @@ export default function AccountCardNews() {
           </Row>
         </Container>
       </Col>
-      <Col style={{ backgroundColor: "grey" }}>
+      <Col>
         <Card className="Cards_tank" style={{ marginTop: 50 }}>
           <Card.Img
             className="Card_img"
             variant="top"
-            src="https://upload.wikimedia.org/wikipedia/ru/thumb/5/5a/%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%98%D0%BA%D1%81.jpg/274px-%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%98%D0%BA%D1%81.jpg"
+            src="https://ot39.ru/images/Otpusk_2.jpeg"
             alt="IMG"
           />
           <Card.Body className="Card_body">
-            <Card.Title className="Card_title">Some title</Card.Title>
-            <Card.Text>Some Text</Card.Text>
+            <Card.Title className="Card_title">
+              Колленги, насчёт отпусков{" "}
+            </Card.Title>
+            <Card.Text>
+              На данный момент в связи с отпуском бухгалтера, прозьба обращаться
+              с данными вопросами к заместителю отдела{" "}
+            </Card.Text>
             <Card.Footer>
-              <small className="text-muted">Last updated ago</small>
+              <small className="text-muted">
+                {" "}
+                Irina Lasar Last updated 3min ago
+              </small>
             </Card.Footer>
           </Card.Body>
         </Card>
       </Col>
-      <Col>
+      <Col className="statcontainer">
         <Container>
           <h1 className="stat_past_per">Current Period</h1>
-          <Row xs={5} md={1} className="g-3">
+          <Row xs={1} md={1} className="g-4">
             <Col style={{ color: compareval.allvuewsCur }}>
               <Card.Title>
                 Общее Число просмотров: {sumvariablesCur.allvuews}
@@ -310,6 +319,7 @@ export default function AccountCardNews() {
           </Row>
         </Container>
       </Col>
+      <AccountCardNews2 />
     </>
   );
 }

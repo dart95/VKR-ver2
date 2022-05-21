@@ -9,6 +9,7 @@ import "./css/Nav_tank.css";
 import "./css/Account.css";
 import "./css/Registration.css";
 import "./css/Statistic.css";
+import "./css/General.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
