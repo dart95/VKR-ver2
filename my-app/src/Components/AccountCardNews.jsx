@@ -15,10 +15,10 @@ export default function AccountCardNews() {
   };
 
   const variablesPast = {
-    AMviews: Math.floor(Math.random() * 1000 + 1),
-    PMviews: Math.floor(Math.random() * 100 + 1),
-    minreading: Math.floor(Math.random() * (10 - 120) + 120),
-    maxreading: Math.floor(Math.random() * (120 - 300) + 300),
+    AMviews: 800,
+    PMviews: 700,
+    minreading: 90,
+    maxreading: 258,
   };
 
   const MathvariablesPast = {
@@ -36,10 +36,10 @@ export default function AccountCardNews() {
   const lettankCur = { persentCTR: 0, iconms: "m", reading: 0 };
 
   const variablesCur = {
-    AMviews: Math.floor(Math.random() * 1000 + 1),
-    PMviews: Math.floor(Math.random() * 100 + 1),
-    minreading: Math.floor(Math.random() * (10 - 120) + 120),
-    maxreading: Math.floor(Math.random() * (120 - 300) + 300),
+    AMviews: 800,
+    PMviews: 500,
+    minreading: 60,
+    maxreading: 120,
   };
 
   const MathvariablesCur = {
@@ -76,17 +76,17 @@ export default function AccountCardNews() {
 
   //conditions for Past Period
   if (MathvariablesPast.allvuews >= 200 && MathvariablesPast.allvuews <= 500) {
-    lettankPast.persentCTR = Math.floor(Math.random() * (25 - 0) + 0);
+    lettankPast.persentCTR = 20;
   } else if (
     MathvariablesPast.allvuews >= 500 &&
     MathvariablesPast.allvuews <= 800
   ) {
-    lettankPast.persentCTR = Math.floor(Math.random() * (35 - 25) + 25);
+    lettankPast.persentCTR = 29;
   } else if (
     MathvariablesPast.allvuews >= 800 &&
     MathvariablesPast.allvuews <= 1500
   ) {
-    lettankPast.persentCTR = Math.floor(Math.random() * (35 - 50) + 50);
+    lettankPast.persentCTR = 45;
   }
   if (variablesPast.minreading < 60) {
     lettankPast.reading = variablesPast.minreading;
@@ -100,17 +100,17 @@ export default function AccountCardNews() {
 
   //conditions for Current Period
   if (MathvariablesCur.allvuews >= 200 && MathvariablesCur.allvuews <= 500) {
-    lettankCur.persentCTR = Math.floor(Math.random() * (25 - 0) + 0);
+    lettankCur.persentCTR = 25;
   } else if (
     MathvariablesCur.allvuews >= 500 &&
     MathvariablesCur.allvuews <= 800
   ) {
-    lettankCur.persentCTR = Math.floor(Math.random() * (35 - 25) + 25);
+    lettankCur.persentCTR = 35;
   } else if (
     MathvariablesCur.allvuews >= 800 &&
     MathvariablesCur.allvuews <= 1500
   ) {
-    lettankCur.persentCTR = Math.floor(Math.random() * (35 - 50) + 50);
+    lettankCur.persentCTR = 39;
   }
   if (variablesCur.minreading < 60) {
     lettankCur.reading = variablesCur.minreading;

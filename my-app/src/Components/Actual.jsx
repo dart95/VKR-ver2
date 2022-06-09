@@ -18,7 +18,7 @@ export default function Actual() {
     fetch("https://jsonplaceholder.typicode.com/users/1")
       .then((response) => response.json())
       .then((json) => setParseautho(json));
-  });
+  }, []);
 
   const nw = parsenews.body;
   const tt = parsenews.title;
