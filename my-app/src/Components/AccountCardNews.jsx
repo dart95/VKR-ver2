@@ -1,10 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import AccountCardNews2 from "./AccountCardNews2";
 
 export default function AccountCardNews() {
+  useEffect(() => {});
   //Unit on Past Periods
   const lettankPast = {
     persentCTR: 0,
@@ -49,6 +51,27 @@ export default function AccountCardNews() {
   const sumvariablesCur = {
     allvuews: variablesCur.AMviews + variablesCur.PMviews,
     alljump: MathvariablesCur.AMjump + MathvariablesCur.PMjump,
+  };
+
+  const compareval = {
+    allvuewsPast: "",
+    allvuewsCur: "",
+    alljumpPast: "",
+    alljumpCur: "",
+    AMjumpPast: "",
+    AMjumpCur: "",
+    PMjumpPast: "",
+    PMjumpCur: "",
+    AMviewsPast: "",
+    AMviewsCur: "",
+    PMviewsPast: "",
+    PMviewsCur: "",
+    persentCTRPast: "",
+    persentCTRCur: "",
+    readingPast: "",
+    readingCur: "",
+    maxreadingPast: "",
+    maxreadingCur: "",
   };
 
   //conditions for Past Period
@@ -98,27 +121,6 @@ export default function AccountCardNews() {
   }
   variablesCur.maxreading = Math.floor(variablesCur.maxreading / 60);
   //end conditions for Current Period
-
-  const compareval = {
-    allvuewsPast: "",
-    allvuewsCur: "",
-    alljumpPast: "",
-    alljumpCur: "",
-    AMjumpPast: "",
-    AMjumpCur: "",
-    PMjumpPast: "",
-    PMjumpCur: "",
-    AMviewsPast: "",
-    AMviewsCur: "",
-    PMviewsPast: "",
-    PMviewsCur: "",
-    persentCTRPast: "",
-    persentCTRCur: "",
-    readingPast: "",
-    readingCur: "",
-    maxreadingPast: "",
-    maxreadingCur: "",
-  };
 
   //conditions for color vision difference
   if (sumvariablesPast.allvuews > sumvariablesCur.allvuews) {
@@ -184,62 +186,63 @@ export default function AccountCardNews() {
     compareval.maxreadingPast = "red";
     compareval.maxreadingCur = "green";
   }
+
   return (
     <>
       <Col className="statcontainer">
         <Container>
           <h1 className="stat_past_per">Past Period</h1>
-          <Row xs={1} md={1} className="g-4">
-            <Col style={{ color: compareval.alljumpPast }}>
-              <Card.Title>
-                Общее Число просмотров: {sumvariablesPast.allvuews}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.alljumpPast }}>
-              <Card.Title>
-                Переход по ссылке Общее: {sumvariablesPast.alljump}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.AMjumpPast }}>
-              <Card.Title>
-                Переход по ссылке Первая половина дня:
-                {MathvariablesPast.AMjump}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.PMjumpPast }}>
-              <Card.Title>
-                Переход по ссылке Вторая половина дня:
-                {MathvariablesPast.PMjump}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.AMviewsPast }}>
-              <Card.Title>
-                Просмотры Первой половины дня: {variablesPast.AMviews}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.PMviewsPast }}>
-              <Card.Title>
-                Просмотры Второй половины дня: {variablesPast.PMviews}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.persentCTRPast }}>
-              <Card.Title>
-                Соответствие селектору: {lettankPast.persentCTR}%
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.readingPast }}>
-              <Card.Title>
-                Минимальное время чтения: {lettankPast.reading}
-                {lettankPast.iconms}
-              </Card.Title>
-            </Col>
-            <Col style={{ color: compareval.maxreadingPast }}>
-              <Card.Title>
-                Максимальное время чтения: {variablesPast.maxreading}m
-              </Card.Title>
-            </Col>
-          </Row>
         </Container>
+        <Row xs={1} md={1} className="g-4">
+          <Col style={{ color: compareval.alljumpPast }}>
+            <Card.Title>
+              Общее Число просмотров: {sumvariablesPast.allvuews}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.alljumpPast }}>
+            <Card.Title>
+              Переход по ссылке Общее: {sumvariablesPast.alljump}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.AMjumpPast }}>
+            <Card.Title>
+              Переход по ссылке Первая половина дня:
+              {MathvariablesPast.AMjump}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.PMjumpPast }}>
+            <Card.Title>
+              Переход по ссылке Вторая половина дня:
+              {MathvariablesPast.PMjump}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.AMviewsPast }}>
+            <Card.Title>
+              Просмотры Первой половины дня: {variablesPast.AMviews}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.PMviewsPast }}>
+            <Card.Title>
+              Просмотры Второй половины дня: {variablesPast.PMviews}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.persentCTRPast }}>
+            <Card.Title>
+              Соответствие селектору: {lettankPast.persentCTR}%
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.readingPast }}>
+            <Card.Title>
+              Минимальное время чтения: {lettankPast.reading}
+              {lettankPast.iconms}
+            </Card.Title>
+          </Col>
+          <Col style={{ color: compareval.maxreadingPast }}>
+            <Card.Title>
+              Максимальное время чтения: {variablesPast.maxreading}m
+            </Card.Title>
+          </Col>
+        </Row>
       </Col>
       <Col>
         <Card className="Cards_tank" style={{ marginTop: 50 }}>
@@ -251,7 +254,7 @@ export default function AccountCardNews() {
           />
           <Card.Body className="Card_body">
             <Card.Title className="Card_title">
-              Колленги, насчёт отпусков{" "}
+              Коллеги, насчёт отпусков{" "}
             </Card.Title>
             <Card.Text>
               На данный момент в связи с отпуском бухгалтера, прозьба обращаться
@@ -259,7 +262,6 @@ export default function AccountCardNews() {
             </Card.Text>
             <Card.Footer>
               <small className="text-muted">
-                {" "}
                 Irina Lasar Last updated 3min ago
               </small>
             </Card.Footer>
@@ -268,7 +270,7 @@ export default function AccountCardNews() {
       </Col>
       <Col className="statcontainer">
         <Container>
-          <h1 className="stat_past_per">Current Period</h1>
+          <h1 className="stat_past_per">Current Period </h1>
           <Row xs={1} md={1} className="g-4">
             <Col style={{ color: compareval.allvuewsCur }}>
               <Card.Title>

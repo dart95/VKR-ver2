@@ -49,8 +49,18 @@ export default function Navibar() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-        <Navbar.Brand onClick={redirecthome} role="button">
-          News
+        <Navbar.Brand
+          onClick={redirecthome}
+          role="button"
+          style={{
+            paddingLeft: 30,
+          }}
+        >
+          <img
+            src="https://whoiswho.obs.ru-moscow-1.hc.sbercloud.ru/images/company/3234556/f356b238-bf3c-4ab3-8403-cf74bee46d9b.jpg"
+            alt=""
+            style={{ width: 100, height: 100 }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

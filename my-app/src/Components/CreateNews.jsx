@@ -92,14 +92,7 @@ export default function CreateNews() {
                 className="d-flex justify-content-end"
                 style={{ marginTop: 5 }}
               >
-                <Button
-                  onClick={() => {
-                    setS();
-                    console.log(s);
-                  }}
-                >
-                  Yes
-                </Button>
+                <Button onClick={handleClose}>Yes</Button>
                 <Button variant="dark" onClick={handleClose}>
                   Close
                 </Button>
@@ -115,6 +108,7 @@ export default function CreateNews() {
               Create News
             </Button>
             <h1 className="stat_past_per">Past Period</h1>
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At
               praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
@@ -145,6 +139,7 @@ export default function CreateNews() {
         <Col className="statcontainer">
           <Container className="statcontainer">
             <h1 className="stat_past_per">Current Period</h1>
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At
               praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
