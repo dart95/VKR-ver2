@@ -101,55 +101,61 @@ export default function CreateNews() {
           </Modal.Body>
         </Modal>
       </div>
-      <Row xs={1} md={3} className="g-3">
-        <Col className="statcontainer">
-          <Container>
-            <Button variant="primary" className="news_btn" onClick={handleShow}>
-              Create News
-            </Button>
-            <h1 className="stat_past_per">Past Period</h1>
+      <div className="Account_news">
+        <Row xs={1} md={3} className="g-3">
+          <Col className="statcontainer">
+            <Container>
+              <Button
+                variant="primary"
+                className="news_btn"
+                onClick={handleShow}
+              >
+                Create News
+              </Button>
+              <h1 className="stat_past_per">Past Period</h1>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
-              recusandae sequi similique sit a nostrum. Odio iure laudantium
-              voluptatum nam numquam.
-            </p>
-          </Container>
-        </Col>
-        <Col style={{}}>
-          <Card className="Cards_tank" style={{ marginTop: 50 }}>
-            <Card.Img
-              className="Card_img"
-              variant="top"
-              src="https://prazdnik-segodnya.ru/wp-content/uploads/2017/10/IMG_0450-05-11-17-03-53-300x300.jpg"
-              alt="IMG"
-            />
-            <Card.Body className="Card_body">
-              <Card.Title className="Card_title">{title}</Card.Title>
-              <Card.Text>{text}</Card.Text>
-              <Card.Footer>
-                <small className="text-muted">
-                  Olga Shmatko Last updated 10 min ago
-                </small>
-              </Card.Footer>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col className="statcontainer">
-          <Container className="statcontainer">
-            <h1 className="stat_past_per">Current Period</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
+                recusandae sequi similique sit a nostrum. Odio iure laudantium
+                voluptatum nam numquam.
+              </p>
+            </Container>
+          </Col>
+          <Col style={{}}>
+            <Card className="Cards_tank" style={{ marginTop: 50 }}>
+              <Card.Img
+                className="Card_img"
+                variant="top"
+                src="https://prazdnik-segodnya.ru/wp-content/uploads/2017/10/IMG_0450-05-11-17-03-53-300x300.jpg"
+                alt="IMG"
+              />
+              <Card.Body className="Card_body">
+                <Card.Title className="Card_title">{title}</Card.Title>
+                <Card.Text>{text}</Card.Text>
+                <Card.Footer>
+                  <small className="text-muted">
+                    Olga Shmatko Last updated 10 min ago
+                  </small>
+                </Card.Footer>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col className="statcontainer">
+            <Container className="statcontainer">
+              <h1 className="stat_past_per">Current Period</h1>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
-              recusandae sequi similique sit a nostrum. Odio iure laudantium
-              voluptatum nam numquam.
-            </p>
-          </Container>
-        </Col>
-        <AccountCardNews />
-      </Row>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                praesentium nobis iusto magni, ipsa aut doloremque aliquam nihil
+                recusandae sequi similique sit a nostrum. Odio iure laudantium
+                voluptatum nam numquam.
+              </p>
+            </Container>
+          </Col>
+          <AccountCardNews />
+        </Row>
+      </div>
     </>
   );
 }

@@ -2,6 +2,8 @@
   text-decoration: none;
   color: #000;
 }
-.Home_container {
+.Tank_container {
   margin: 0 auto;
+  width: 80%;
+  padding-top: 10px;
 }

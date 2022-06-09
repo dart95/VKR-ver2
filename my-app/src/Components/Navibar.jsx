@@ -1,5 +1,5 @@
 //import React, { useEffect } from "react";
-import { Nav, Navbar, Button, Form } from "react-bootstrap";
+import { Nav, Navbar, Button, Form, FormControl } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
@@ -81,11 +81,28 @@ export default function Navibar() {
               Statistic
             </Nav.Link>
           </Nav>
-          <Nav className="float-end">
-            <Button variant="dark" onClick={handleShow}>
+          <Nav style={{ marginLeft: 60 + "%" }}>
+            <FormControl
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            ></FormControl>
+          </Nav>
+          <Nav>
+            <Button
+              variant="dark"
+              onClick={handleShow}
+              style={{
+                marginLeft: 10,
+              }}
+            >
               Log In
             </Button>
-            <Button variant="dark" onClick={redirectregistration}>
+            <Button
+              variant="dark"
+              onClick={redirectregistration}
+              style={{ marginLeft: 10 + "px" }}
+            >
               Sign up
             </Button>
           </Nav>

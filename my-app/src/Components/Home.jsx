@@ -10,8 +10,8 @@ function Home(props) {
     link4: "https://ria.ru/20220519/protest-1789405098.html",
   };
   return (
-    <div className="Home_container">
-      <Row xs={1} md={3} lg={4} className="g-4">
+    <div className="Tank_container">
+      <Row xs={1} md={3} lg={3} className="g-3">
         <Col>
           <Card className="Cards_tank">
             <Card.Img

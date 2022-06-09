@@ -27,21 +27,28 @@ export default function Actual() {
   const author = parseauthor.name;
 
   return (
-    <Row xs={1} md={4} className="g-4">
-      <Col>
-        <Card className="Cards_tank">
-          <Card.Img className="Card_img" variant="top" src={img} alt={altimg} />
-          <Card.Body className="Card_body">
-            <Card.Title className="Card_title">{tt}</Card.Title>
-            <Card.Text>{nw}</Card.Text>
-            <Card.Footer>
-              <small className="text-muted">
-                {author} Last updated 3 mins ago
-              </small>
-            </Card.Footer>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
+    <div className="Tank_container">
+      <Row xs={1} md={3} className="g-3">
+        <Col>
+          <Card className="Cards_tank">
+            <Card.Img
+              className="Card_img"
+              variant="top"
+              src={img}
+              alt={altimg}
+            />
+            <Card.Body className="Card_body">
+              <Card.Title className="Card_title">{tt}</Card.Title>
+              <Card.Text>{nw}</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">
+                  {author} Last updated 3 mins ago
+                </small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </div>
   );
 }

@@ -5,7 +5,9 @@ import CreateNews from "./CreateNews";
 export const Account = () => {
   return (
     <>
-      <CreateNews />
+      <div className="Tank_container">
+        <CreateNews />
+      </div>
     </>
   );
 };
