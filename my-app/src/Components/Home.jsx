@@ -10,7 +10,7 @@ function Home(props) {
     link4: "https://ria.ru/20220519/protest-1789405098.html",
   };
   return (
-    <Row xs={1} md={4} className="g-4">
+    <Row xs={1} md={2} lg={4} className="g-4">
       <Col>
         <Card className="Cards_tank">
           <Card.Img
@@ -27,8 +27,8 @@ function Home(props) {
             <Card.Text>
               Так, европейская валюта в моменте опускалась до 61,11 рубля —
               впервые с апреля 2017 года, американская торговалась на уровне
-              63,22. Таким образом, пара евро/рубль уходила ниже стоимости пары
-              доллар/рубль.
+              63,22. Таким образом, пара евро/рубль уходила ниже стоимости
+              евро/рубль
             </Card.Text>
             <Card.Footer>
               <small className="text-muted">Last updated 3 mins ago</small>
