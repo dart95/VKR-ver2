@@ -11,6 +11,7 @@ import Actual from "../Components/Actual";
 import Sports from "./Sports";
 import { Account } from "./Account";
 import Registrationpage from "./Registrationpage";
+import About from "../Components/About";
 
 function App(props) {
   /*const [ntitle, setNtitle] = useState();
@@ -60,6 +61,23 @@ function App(props) {
             <Registrationpage />
           </Route>
         </Switch>
+
+        <div color="primary">
+          <ul>
+            <li>
+              <a href="">О БЮРО</a>
+              <a href="">ЧАСТНЫМ КЛИЕНТАМ</a>
+              <a href="">КОНТАКТЫ </a>
+            </li>
+            <li>
+              <a href="">КОРПОРАТИВНЫМ КЛИЕНТАМ</a>
+              <a href="">Сервисы Бюро</a>
+              <a href="">Аналитика Бюро</a>
+              <a href="">Статистика Бюро</a>
+            </li>
+            <li></li>
+          </ul>
+        </div>
       </div>
     </BrowserRouter>
   );

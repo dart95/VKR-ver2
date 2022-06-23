@@ -7,3 +7,8 @@
   width: 80%;
   padding-top: 10px;
 }
+li {
+  display: block;
+  clear: both;
+  list-style-type: none;
+}
